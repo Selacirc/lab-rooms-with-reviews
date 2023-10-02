@@ -1,0 +1,17 @@
+<h2>Welcome {{user.fullName}}!</h2>
+
+{{#if rooms}}
+
+    <h3>Listed rooms:</h3>
+
+    {{#each rooms}}
+
+        <a href="/rooms/details/{{_id}}">{{name}}</a>
+
+    {{/each}}
+
+    {{else}}
+
+    <a href="/rooms/new">List a room</a>
+
+{{/if}}

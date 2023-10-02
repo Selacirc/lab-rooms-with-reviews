@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{title}}</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+
+    <nav>
+      <a href="/">Home</a>
+      <a href="/rooms/all">See Rooms</a>
+
+      {{#if isLoggedIn}}
+
+      <a href="/rooms/new">Add Room</a>
+      <a href="/users/profile">Profile</a>
+      <a href="/auth/logout">Logout</a>
+
+      {{else}}
+
+      <a href="/auth/signup">Signup</a>
+      <a href="/auth/login">Login</a>
+
+      {{/if}}
+
+    </nav>
+
+    {{{body}}}
+  </body>
+</html>
